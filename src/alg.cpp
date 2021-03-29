@@ -1,6 +1,4 @@
-// Copyright 2021 NNTU-CS
-
-int countPairs1(int *arr, int len, int value) {
+int countPairs1(int* arr, int len, int value) {
 int ff = 0;
 for (int i = 0; i < len-1; i++) {
 for (int j = i+1; j <= len; j++) {
@@ -9,14 +7,16 @@ if (arr[i] + arr[j] == value) ff=ff+1;
 }
 return ff;
 }
-int countPairs2(int *arr, int len, int value) {
+int countPairs2(int* arr, int len, int value) {
 int ff = 0, l = 0;
 for (int i = 0; i < len; i++) {
+cout << arr[i] << endl;
 if (arr[i] >= value) {
 l = i;
 break;
+}	
 }
-}
+cout << l << endl;
 for (int i = l; i >= 0; i--) {
 for (int j = 0; j < i; j++) {
 if (arr[i] + arr[j] == value)
@@ -25,8 +25,7 @@ ff++;
 }
 return ff;
 }
-
-int countPairs3(int *arr, int len, int value) {
+int countPairs3(int* arr, int len, int value) {
 int count = 0, left = 0, right = len - 1;
 int ff = 0, l = 0;
 for (int i = 0; i < len; i++) {
