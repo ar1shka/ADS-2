@@ -11,7 +11,7 @@ return ff;
 }
 int countPairs2(int *arr, int len, int value) {
 int ff = 0, l = 0;
-for (int i = 0; i < len-1; i++) {
+for (int i = 0; i < len; i++) {
 if (arr[i] >= value) {
 l = i;
 break;
@@ -29,7 +29,7 @@ return ff;
 int countPairs3(int *arr, int len, int value) {
 int count = 0, left = 0, right = len - 1;
 int ff = 0, l = 0;
-for (int i = 0; i < len-1; i++) {
+for (int i = 0; i < len; i++) {
 if (arr[i] >= value) {
 l = i;
 break;
