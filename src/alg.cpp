@@ -8,8 +8,7 @@ if (arr[i] + arr[j] == value) ff = ff + 1;
 }
 return ff;
 }
-int countPairs2(int* arr, int len, int value)
-{
+int countPairs2(int* arr, int len, int value) {
 int ff = 0, l = 0;
 for (int i = 0; i < len; i++) {
 if (arr[i] >= value) {
